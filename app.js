@@ -1,10 +1,17 @@
-const a1 = document.getElementById("a1");
-a1.addEventListener("click", moverA);
+document.addEventListener("DOMContentLoaded", function () {
+    // Agrega un event listener al documento para esperar a que se cargue completamente
+    var miDiv = document.getElementById("miDiv");
 
-const ima1 = document.getElementById("a1");
-const ima3 = document.getElementById("a3");
-const C3 = document.getElementById("3c");
-function moverA(){
-  C3.textContent = "deuna";
-}
-
+    miDiv.addEventListener("click", function () {
+        // Al hacer clic en el div, remueve la imagen
+        var imagen = miDiv.querySelector("img");
+        if (imagen) {
+            // Verifica si hay una imagen presente antes de intentar removerla
+            miDiv.removeChild(imagen);
+        }else{
+            imagen = document.createElement("img");
+            imagen.src = "nuevo_piezas/peonblancas.png";
+            miDiv.appendChild(imagen);
+        }
+    });
+});

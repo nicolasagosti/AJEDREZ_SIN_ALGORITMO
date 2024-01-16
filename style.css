@@ -64,8 +64,5 @@ html, body, main {
   .esquina{
     background-color:  rgb(138, 91, 2);
     width: 9px;
-    height: 12px;
-  }
-  button{
-    border: none;
+    height: 11px;
   }
